@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vue Todo</title>
+	<script src="https://unpkg.com/vue@next"></script>
+	<style>
+		#app {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+	<input type="text" class="todoText" v-model="todoText">
+	<button id="todoAddBtn" @click="addTodo">Add</button>
+	<ul id="todoLis"><li style="cursor: pointer;" v-for="todo in todoList" :key="todo" @click="todoClick(todo)"> {{ todo }} </li>
+	</ul>
+	</div>
+	<script src="./vue.js"></script>
+</body>
+</html>
