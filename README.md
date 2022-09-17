@@ -1,2 +1,2 @@
 <p align="center">Todo app with vue.js</p>
-![image](https://user-images.githubusercontent.com/78105136/190875796-4c49b914-346d-4fd6-9f04-56b137a0b687.png)
+![image](https://user-images.githubusercontent.com/78105136/190875810-433502d5-cb5a-4f6d-b0cd-eb9be454b0d8.png)
