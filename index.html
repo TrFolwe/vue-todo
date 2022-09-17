@@ -5,50 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Vue Todo</title>
 	<script src="https://unpkg.com/vue@next"></script>
-	<style>
-		body {
-			font-size: 20px;
-		}
-		#app {
-			width: 50%;
-			height: 75%;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			border: 1px solid black;
-			display: flex;
-			flex: 1;
-			align-items: center;
-			justify-content: space-evenly;
-			flex-direction: column;
-		}
-
-		.todoList {
-			position: relative;
-			width: 50%;
-			height: 75%;
-			border: 1px solid black;
-			overflow: auto;
-			list-style: decimal;
-			border-radius: 5px;
-		}
-
-		.todoList li {
-			cursor: pointer;
-			padding: 5px;
-			margin: 5px;
-		}
-
-		.todoList li:not(:last-child) {
-			border-bottom: 1px solid black;
-		}
-
-		.todoList li:hover {
-			text-decoration: line-through darkred;
-		}
-
-	</style>
+	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 	<h1 style="text-align: center;">Todo</h1>
