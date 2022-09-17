@@ -7,10 +7,10 @@ Vue.createApp({
     },
     methods: {
         addTodo() {
-            if(!this.todoText || this.todoList.includes(this.todoText)) return;
-            this.todoList.push(`${this.todoText} - ${new DateTime().toLocaleDateString()}`);
+            if(!this.todoText || this.todoList.find(i => i.split(" - ")[0] === this.todoText)) return;
+            this.todoList.push(`${this.todoText} - ${(new Date()).toLocaleString()}`);
         },
-        todoClick(todo) {
+        todoDelete(todo) {
             this.todoList = this.todoList.filter(i => i !== todo);
         }
     }

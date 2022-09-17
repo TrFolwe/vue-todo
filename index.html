@@ -6,21 +6,59 @@
 	<title>Vue Todo</title>
 	<script src="https://unpkg.com/vue@next"></script>
 	<style>
+		body {
+			font-size: 20px;
+		}
 		#app {
+			width: 50%;
+			height: 75%;
 			position: absolute;
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
 			border: 1px solid black;
+			display: flex;
+			flex: 1;
+			align-items: center;
+			justify-content: space-evenly;
+			flex-direction: column;
 		}
+
+		.todoList {
+			position: relative;
+			width: 50%;
+			height: 75%;
+			border: 1px solid black;
+			overflow: auto;
+			list-style: decimal;
+			border-radius: 5px;
+		}
+
+		.todoList li {
+			cursor: pointer;
+			padding: 5px;
+			margin: 5px;
+		}
+
+		.todoList li:not(:last-child) {
+			border-bottom: 1px solid black;
+		}
+
+		.todoList li:hover {
+			text-decoration: line-through darkred;
+		}
+
 	</style>
 </head>
 <body>
+	<h1 style="text-align: center;">Todo</h1>
 	<div id="app">
-	<input type="text" class="todoText" v-model="todoText">
-	<button id="todoAddBtn" @click="addTodo">Add</button>
-	<ul id="todoLis"><li style="cursor: pointer;" v-for="todo in todoList" :key="todo" @click="todoClick(todo)"> {{ todo }} </li>
-	</ul>
+		<h2> {{todoList.length}} Todo count </h2>
+		<div class="input-container">
+			<input placeholder="Add todo..." type="text" class="todoText" v-model="todoText">
+			<button id="todoAddBtn" @click="addTodo">Add</button>
+		</div>
+		<ul class="todoList"><li v-for="todo in todoList" :key="todo" @click="todoDelete(todo)"> {{ todo }} </li></ul>
 	</div>
 	<script src="./vue.js"></script>
 </body>
