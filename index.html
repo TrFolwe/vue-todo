@@ -9,6 +9,7 @@
 </head>
 <body>
 	<h1 style="text-align: center;">Todo</h1>
+	<h1>Helpful ayd1ndemirci</h1>
 	<div id="app">
 		<h2> {{todoList.length}} Todo count </h2>
 		<div class="input-container">
@@ -18,5 +19,8 @@
 		<ul class="todoList"><li v-for="todo in todoList" :key="todo" @click="todoDelete(todo)"> {{ todo }} </li></ul>
 	</div>
 	<script src="./vue.js"></script>
+	<script>
+		console.log("Deneme")
+	</script>
 </body>
 </html>
